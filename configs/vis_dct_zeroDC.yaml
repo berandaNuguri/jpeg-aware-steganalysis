@@ -1,0 +1,18 @@
+dataset_class:
+  train: VisualizeDCTDataset
+  validation: VisualizeDCTDataset
+  test: VisualizeDCTDataset
+
+train_transforms:
+  - spatial:
+    - name: ToPILImage
+    - name: ToTensor
+  - dct:
+    - name: ZeroDCCoef
+  
+test_transforms:
+  - spatial:
+    - name: ToPILImage
+    - name: ToTensor
+  - dct:
+    - name: ZeroDCCoef

@@ -1,0 +1,16 @@
+dataset_class:
+  train: PairedDCTPatchDataset
+  validation: PairedDCTPatchDataset
+  test: PairedDCTPatchDataset
+
+train_transforms:
+  - name: MinMaxNormalize
+    min: [-63, -30, -30]
+    max: [63, 30, 30]
+  - name: ZeroDCCoef
+  
+test_transforms:
+  - name: MinMaxNormalize
+    min: [-63, -30, -30]
+    max: [63, 30, 30]
+  - name: ZeroDCCoef

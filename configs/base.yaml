@@ -1,0 +1,16 @@
+dataset_class:
+  train: PairedPatchDataset
+  validation: PairedPatchDataset
+  test: PairedPatchDataset
+
+train_transforms:
+  - name: ToPILImage
+  # - name: RandomHorizontalFlip
+  #   p: 0.5
+  # - name: RandomVerticalFlip
+  #   p: 0.5
+  - name: ToTensor
+
+test_transforms:
+  - name: ToPILImage
+  - name: ToTensor

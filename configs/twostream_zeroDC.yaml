@@ -1,0 +1,18 @@
+dataset_class:
+  train: TwoStreamDataset
+  validation: TwoStreamDataset
+  test: TwoStreamDataset
+
+train_transforms:
+  - spatial:
+    - name: ToPILImage
+    - name: ToTensor
+  - dct:
+    - name: ZeroDCCoef
+  
+test_transforms:
+  - spatial:
+    - name: ToPILImage
+    - name: ToTensor
+  - dct:
+    - name: ZeroDCCoef

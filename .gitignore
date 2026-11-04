@@ -1,0 +1,79 @@
+# Machine-specific configuration / credentials
+.env
+.env.*
+!.env.example
+/configs/local.*
+!/configs/local.example.*
+/configs/private/
+
+# Python environment / generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
+
+# Dataset / generated manifests
+/data
+/datasets
+csv
+*.csv
+
+# Figures / research artifacts
+figures
+/results
+/outputs
+/reports
+/analysis_results
+/visualizations
+/paper
+/paper_archive*/
+/manuscript
+/notebooks
+/backups
+/.tools
+/.cache
+
+# Checkpoint directories, including nested legacy model folders
+ckpt
+ckpts
+checkpoint
+checkpoints
+checkpoint_384
+
+# Generated weights, also when written outside the directories above
+*.pt
+*.pth
+*.pth.tar
+*.ckpt
+*.safetensors
+*.onnx
+
+# Experiment logs
+wandb
+runs
+lightning_logs
+logs
+*.log
+# Native build artifacts
+*.so
+*.o
+
+# Actual datasets are local-only, separate from processing code
+/src/data
+
+# W&B local runs, account settings and binary history
+wandb/
+.wandb/
+*.wandb
+wandb-metadata.json
+wandb-summary.json
+wandb-history.jsonl
+wandb-events.jsonl
+.netrc

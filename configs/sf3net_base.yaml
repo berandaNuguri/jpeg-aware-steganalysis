@@ -1,0 +1,10 @@
+dataset_class:
+  train: SF3NetDataset
+  validation: SF3NetDataset
+  test: SF3NetDataset
+
+train_transforms:
+  - name: ToTensor
+  
+test_transforms:
+  - name: ToTensor

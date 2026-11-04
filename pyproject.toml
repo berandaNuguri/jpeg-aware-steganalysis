@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jpeg-aware-steganalysis"
+version = "0.0.0"
+description = "Research source code organized by execution role"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["torch", "torchvision", "timm", "numpy", "pandas", "scikit-learn", "opencv-python", "Pillow", "matplotlib", "scipy", "albumentations", "tqdm", "wandb", "jpeglib", "PyWavelets", "PyYAML", "einops", "torchmetrics"]
+
+[project.optional-dependencies]
+data-tools = ["requests", "datasets", "flickrapi", "conseal", "jpegio"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["jpeg_aware_steganalysis", "jpeg_aware_steganalysis.*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"jpeg_aware_steganalysis" = ["resources/**/*.npy", "models/**/*.cpp", "models/**/*.cu", "models/**/*.h", "models/**/*.cuh"]

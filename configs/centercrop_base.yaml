@@ -1,0 +1,18 @@
+dataset_class:
+  train: DefaultDataset
+  validation: DefaultDataset
+  test: DefaultDataset
+
+train_transforms:
+  - name: ToPILImage
+  - name: RandomHorizontalFlip
+    p: 0.5
+  - name: CenterCrop
+    size: 256
+  - name: ToTensor
+
+test_transforms:
+  - name: ToPILImage
+  - name: CenterCrop
+    size: 256
+  - name: ToTensor

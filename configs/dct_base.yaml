@@ -1,0 +1,8 @@
+dataset_class:
+  train: PairedDCTPatchDataset
+  validation: PairedDCTPatchDataset
+  test: PairedDCTPatchDataset
+
+train_transforms:
+  
+test_transforms:
